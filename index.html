@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TheTechRJ — Compass for Android</title>
+  <meta name="description" content="TheTechRJ is an independent Android developer and the maker of Compass, a simple and accurate compass app for Android.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://rajat-jasrotia.github.io/">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #dc2626;
+      --accent-text: #ffffff;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1120;
+        --surface: #111827;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --border: #1f2937;
+        --accent: #ef4444;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: inherit; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+    header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; text-decoration: none; }
+    .brand span { color: var(--accent); }
+    nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; margin-left: 18px; }
+    nav a:hover { color: var(--text); }
+
+    .hero { padding: 64px 0 40px; text-align: center; }
+    .hero h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.15; margin: 0 0 16px; letter-spacing: -0.02em; }
+    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 560px; margin: 0 auto; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .icon { width: 120px; height: 120px; }
+    .card h2 { margin: 0 0 8px; font-size: 1.6rem; }
+    .card p { margin: 0 0 20px; color: var(--muted); }
+    .features { list-style: none; padding: 0; margin: 0 0 24px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .features li {
+      font-size: 0.85rem; padding: 4px 12px; border-radius: 999px;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-block; padding: 12px 20px; border-radius: 12px;
+      font-weight: 600; text-decoration: none; border: 1px solid var(--border);
+    }
+    .btn.primary { background: var(--accent); color: var(--accent-text); border-color: var(--accent); }
+    .btn:hover { opacity: 0.9; }
+
+    .about { padding: 48px 0; }
+    .about h2 { font-size: 1.3rem; margin: 0 0 8px; }
+    .about p { color: var(--muted); margin: 0; }
+
+    footer { border-top: 1px solid var(--border); padding: 24px 0 40px; color: var(--muted); font-size: 0.9rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+    footer a { color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .hero { padding: 44px 0 28px; }
+      .card { grid-template-columns: 1fr; text-align: center; padding: 24px; }
+      .icon { margin: 0 auto; width: 96px; height: 96px; }
+      .features, .actions { justify-content: center; }
+      .btn { width: 100%; text-align: center; }
+      nav a { margin-left: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="/">TheTech<span>RJ</span></a>
+      <nav>
+        <a href="#compass">Compass</a>
+        <a href="https://rajat-jasrotia.github.io/compass-privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Simple, useful apps for Android</h1>
+        <p>TheTechRJ is an independent developer building clean, lightweight Android apps that do one job well.</p>
+      </div>
+    </section>
+
+    <section id="compass">
+      <div class="wrap">
+        <article class="card">
+          <svg class="icon" viewBox="0 0 120 120" role="img" aria-label="Compass app icon">
+            <rect width="120" height="120" rx="28" fill="#0f172a"/>
+            <circle cx="60" cy="60" r="40" fill="none" stroke="#e2e8f0" stroke-width="4"/>
+            <polygon points="60,26 70,60 50,60" fill="#ef4444"/>
+            <polygon points="60,94 70,60 50,60" fill="#e2e8f0"/>
+            <circle cx="60" cy="60" r="5" fill="#0f172a" stroke="#e2e8f0" stroke-width="2"/>
+          </svg>
+          <div>
+            <h2>Compass</h2>
+            <p>A clean, easy-to-read compass for your Android phone. Find your direction quickly, wherever you are.</p>
+            <ul class="features">
+              <li>Fast &amp; lightweight</li>
+              <li>Easy to read</li>
+              <li>Free on Google Play</li>
+            </ul>
+            <div class="actions">
+              <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.thetechrj.compass" target="_blank" rel="noopener">Get it on Google Play</a>
+              <a class="btn" href="https://rajat-jasrotia.github.io/compass-privacy/">Privacy Policy</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="wrap">
+        <h2>About TheTechRJ</h2>
+        <p>TheTechRJ creates practical Android utilities with a focus on simplicity, performance, and respect for user privacy.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> TheTechRJ</span>
+      <span>
+        <a href="https://play.google.com/store/apps/details?id=com.thetechrj.compass" target="_blank" rel="noopener">Compass on Google Play</a>
+        &middot;
+        <a href="https://rajat-jasrotia.github.io/compass-privacy/">Compass Privacy Policy</a>
+      </span>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
